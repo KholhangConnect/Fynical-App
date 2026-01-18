@@ -67,7 +67,7 @@ fun HomeScreen(navController: NavController) {
                             onClick = {
                                 showMenu = false
                                 try {
-                                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/YOUR_CHANNEL_ID"))
+                                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/@KholhangConnect"))
                                     context.startActivity(intent)
                                 } catch (e: Exception) {
                                     // Handle error - could show snackbar
@@ -502,7 +502,7 @@ fun UtilitiesSection(navController: NavController) {
         icon = null,
         onClick = {
             try {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/YOUR_CHANNEL_ID"))
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/@KholhangConnect"))
                 context.startActivity(intent)
             } catch (e: Exception) {
                 // Handle error

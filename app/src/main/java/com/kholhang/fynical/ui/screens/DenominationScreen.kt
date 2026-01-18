@@ -111,7 +111,24 @@ fun DenominationScreen(navController: NavController? = null) {
                         val notesTotal = rupees.value.sumOf { it.total }
                         val coinsTotal = coins.value.sumOf { it.total }
                         val grandTotal = notesTotal + coinsTotal
-                        shareDenominations(context, rupees.value, coins.value, notesTotal, coinsTotal, grandTotal)
+                        val openingBalanceValue = openingBalance.toDoubleOrNull() ?: 0.0
+                        val totalDepositValue = totalDeposit.toDoubleOrNull() ?: 0.0
+                        val totalPaymentValue = totalPayment.toDoubleOrNull() ?: 0.0
+                        val calculatedTotalCashInHand = openingBalanceValue + totalDepositValue
+                        val closingBalance = calculatedTotalCashInHand - totalPaymentValue
+                        shareDenominations(
+                            context, 
+                            rupees.value, 
+                            coins.value, 
+                            notesTotal, 
+                            coinsTotal, 
+                            grandTotal,
+                            openingBalanceValue,
+                            totalDepositValue,
+                            totalPaymentValue,
+                            calculatedTotalCashInHand,
+                            closingBalance
+                        )
                     }) {
                         Icon(
                             imageVector = Icons.Default.Share,
@@ -314,27 +331,67 @@ fun shareDenominations(
     coins: List<DenominationItem>,
     notesTotal: Double,
     coinsTotal: Double,
-    grandTotal: Double
+    grandTotal: Double,
+    openingBalance: Double = 0.0,
+    totalDeposit: Double = 0.0,
+    totalPayment: Double = 0.0,
+    totalCashInHand: Double = 0.0,
+    closingBalance: Double = 0.0
 ) {
     val shareText = buildString {
         appendLine("DENOMINATION REPORT")
         appendLine("===================")
         appendLine()
-        appendLine("NOTES:")
-        notes.filter { it.quantity > 0 }.forEach { note ->
-            appendLine("${CurrencyFormatter.format(note.value)} x ${note.quantity} = ${CurrencyFormatter.format(note.total)}")
+        
+        // Notes Section - Only show denominations with quantity > 0
+        val notesWithQuantity = notes.filter { it.quantity > 0 }
+        if (notesWithQuantity.isNotEmpty()) {
+            appendLine("NOTES:")
+            appendLine("------")
+            notesWithQuantity.forEach { note ->
+                appendLine("${CurrencyFormatter.format(note.value)} x ${note.quantity} = ${CurrencyFormatter.format(note.total)}")
+            }
+            appendLine("Total Notes: ${CurrencyFormatter.format(notesTotal)}")
+            appendLine()
         }
-        appendLine("Total Notes: ${CurrencyFormatter.format(notesTotal)}")
-        appendLine()
-        appendLine("COINS:")
-        coins.filter { it.quantity > 0 }.forEach { coin ->
-            appendLine("${CurrencyFormatter.format(coin.value)} x ${coin.quantity} = ${CurrencyFormatter.format(coin.total)}")
+        
+        // Coins Section - Only show denominations with quantity > 0
+        val coinsWithQuantity = coins.filter { it.quantity > 0 }
+        if (coinsWithQuantity.isNotEmpty()) {
+            appendLine("COINS:")
+            appendLine("------")
+            coinsWithQuantity.forEach { coin ->
+                appendLine("${CurrencyFormatter.format(coin.value)} x ${coin.quantity} = ${CurrencyFormatter.format(coin.total)}")
+            }
+            appendLine("Total Coins: ${CurrencyFormatter.format(coinsTotal)}")
+            appendLine()
         }
-        appendLine("Total Coins: ${CurrencyFormatter.format(coinsTotal)}")
+        
+        // Grand Total
+        if (notesWithQuantity.isNotEmpty() || coinsWithQuantity.isNotEmpty()) {
+            appendLine("GRAND TOTAL: ${CurrencyFormatter.format(grandTotal)}")
+            appendLine("Amount in Words: ${NumberToWordsConverter.convertToWords(grandTotal)}")
+            appendLine()
+        }
+        
+        // Cash Book Details
+        if (openingBalance > 0.0 || totalDeposit > 0.0 || totalPayment > 0.0 || totalCashInHand > 0.0) {
+            appendLine("CASH BOOK DETAILS")
+            appendLine("=================")
+            appendLine()
+            appendLine("Opening Balance: ${CurrencyFormatter.format(openingBalance)}")
+            appendLine("Total Deposit: ${CurrencyFormatter.format(totalDeposit)}")
+            appendLine("Total Cash in Hand: ${CurrencyFormatter.format(totalCashInHand)}")
+            appendLine("Total Payment: ${CurrencyFormatter.format(totalPayment)}")
+            appendLine("Closing Balance: ${CurrencyFormatter.format(closingBalance)}")
+            appendLine()
+            appendLine("Closing Balance in Words: ${NumberToWordsConverter.convertToWords(closingBalance)}")
+        }
+        
+        // Summary
         appendLine()
-        appendLine("GRAND TOTAL: ${CurrencyFormatter.format(grandTotal)}")
-        appendLine()
-        appendLine("Amount in Words: ${NumberToWordsConverter.convertToWords(grandTotal)}")
+        appendLine("---")
+        appendLine("Generated by Fynical App")
     }
     
     val intent = Intent(Intent.ACTION_SEND).apply {
