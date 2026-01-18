@@ -51,7 +51,7 @@ Fynical is a comprehensive financial calculator app designed to simplify complex
 
 ## 📱 Screenshots
 
-<!-- Add screenshots here -->
+Screenshots will be added soon. See `SCREENSHOT_GUIDE.md` for requirements.
 
 ## 🛠️ Tech Stack
 

@@ -1,5 +1,5 @@
 @echo off
-echo Building APK for Fincal App...
+echo Building APK for Fynical App...
 echo.
 
 cd /d "%~dp0"
@@ -13,25 +13,19 @@ if exist "gradlew.bat" (
         echo APK Build Successful!
         echo ========================================
         echo.
-        echo APK Location: app\build\outputs\apk\debug\app-debug.apk
+        echo APK Location: app\build\outputs\apk\debug\
         echo.
-        if exist "app\build\outputs\apk\debug\app-debug.apk" (
+        if exist "app\build\outputs\apk\debug" (
             echo Opening APK location...
             explorer "app\build\outputs\apk\debug"
         )
     ) else (
         echo.
         echo Build failed! Please check the error messages above.
-        echo Make sure you have Android Studio installed or Gradle in your PATH.
     )
 ) else (
     echo Gradle wrapper not found!
-    echo.
-    echo Please use one of these methods:
-    echo 1. Open the project in Android Studio and build from there
-    echo 2. Install Gradle and add it to your PATH
-    echo.
-    echo See BUILD_INSTRUCTIONS.md for more details.
+    echo Please open the project in Android Studio to build.
 )
 
 pause
