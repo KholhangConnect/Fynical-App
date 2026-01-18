@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fynical - Home Screen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 0;
+            color: #333;
+        }
+        
+        .phone-frame {
+            width: 360px;
+            height: 800px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 24px;
+            background: #2196F3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .app-bar {
+            background: #2196F3;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .app-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 20px;
+            height: calc(100% - 120px);
+            overflow-y: auto;
+        }
+        
+        .category-section {
+            margin-bottom: 25px;
+        }
+        
+        .category-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .calculator-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .calculator-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .calculator-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            border-radius: 12px;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .calculator-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .calculator-desc {
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .tab.active {
+            background: #2196F3;
+            color: white;
+        }
+        
+        .tab:not(.active) {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="status-bar">
+            <span>9:41</span>
+            <span>🔋 100%</span>
+        </div>
+        
+        <div class="app-bar">
+            <div class="app-title">Fynical</div>
+            <div style="font-size: 20px;">⋮</div>
+        </div>
+        
+        <div class="content">
+            <div class="tabs">
+                <div class="tab active">Basic</div>
+                <div class="tab">Loan Tools</div>
+                <div class="tab">Tax & Pricing</div>
+                <div class="tab">Utilities</div>
+            </div>
+            
+            <div class="category-section">
+                <div class="category-title">Basic Calculators</div>
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <div class="calculator-icon">EMI</div>
+                        <div class="calculator-name">EMI Calculator</div>
+                        <div class="calculator-desc">Calculate loan EMIs</div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="calculator-icon">FD</div>
+                        <div class="calculator-name">Fixed Deposit</div>
+                        <div class="calculator-desc">FD maturity calculator</div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="calculator-icon">RD</div>
+                        <div class="calculator-name">Recurring Deposit</div>
+                        <div class="calculator-desc">RD calculator</div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="calculator-icon">SIP</div>
+                        <div class="calculator-name">SIP Calculator</div>
+                        <div class="calculator-desc">Investment planning</div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="calculator-icon">PPF</div>
+                        <div class="calculator-name">PPF Calculator</div>
+                        <div class="calculator-desc">PPF planning</div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="calculator-icon">APY</div>
+                        <div class="calculator-name">APY Calculator</div>
+                        <div class="calculator-desc">Atal Pension Yojana</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-section">
+                <div class="category-title">Loan Tools</div>
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <div class="calculator-icon">💰</div>
+                        <div class="calculator-name">Advanced EMI</div>
+                        <div class="calculator-desc">With prepayment</div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="calculator-icon">📊</div>
+                        <div class="calculator-name">Loan Comparison</div>
+                        <div class="calculator-desc">Compare loans</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-section">
+                <div class="category-title">Tax & Pricing</div>
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <div class="calculator-icon">GST</div>
+                        <div class="calculator-name">GST Calculator</div>
+                        <div class="calculator-desc">Calculate GST</div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="calculator-icon">📈</div>
+                        <div class="calculator-name">Income Tax</div>
+                        <div class="calculator-desc">Tax calculator</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="category-section">
+                <div class="category-title">Utilities</div>
+                <div class="calculator-grid">
+                    <div class="calculator-card">
+                        <div class="calculator-icon">💱</div>
+                        <div class="calculator-name">Currency Converter</div>
+                        <div class="calculator-desc">Live exchange rates</div>
+                    </div>
+                    <div class="calculator-card">
+                        <div class="calculator-icon">💵</div>
+                        <div class="calculator-name">Denomination</div>
+                        <div class="calculator-desc">Cash management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

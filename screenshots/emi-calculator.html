@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fynical - EMI Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .phone-frame {
+            width: 360px;
+            height: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .status-bar {
+            height: 24px;
+            background: #2196F3;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            font-size: 12px;
+        }
+        
+        .app-bar {
+            background: #2196F3;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .back-btn {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .app-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 20px;
+            height: calc(100% - 120px);
+            overflow-y: auto;
+        }
+        
+        .input-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: #2196F3;
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .results-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .result-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .result-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .result-value {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .schedule-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .schedule-table {
+            width: 100%;
+            font-size: 12px;
+        }
+        
+        .schedule-table th {
+            background: #f5f5f5;
+            padding: 10px 5px;
+            text-align: left;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .schedule-table td {
+            padding: 8px 5px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #2196F3;
+            border-radius: 8px;
+            background: white;
+            color: #2196F3;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .action-btn.primary {
+            background: #2196F3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="status-bar">
+            <span>9:41</span>
+            <span>🔋 100%</span>
+        </div>
+        
+        <div class="app-bar">
+            <div class="back-btn">←</div>
+            <div class="app-title">EMI Calculator</div>
+            <div style="margin-left: auto;">📤</div>
+        </div>
+        
+        <div class="content">
+            <div class="input-section">
+                <div class="input-group">
+                    <div class="input-label">Principal Amount</div>
+                    <input type="text" class="input-field" value="₹10,00,000">
+                </div>
+                <div class="input-group">
+                    <div class="input-label">Interest Rate (% per annum)</div>
+                    <input type="text" class="input-field" value="8.5%">
+                </div>
+                <div class="input-group">
+                    <div class="input-label">Loan Tenure (months)</div>
+                    <input type="text" class="input-field" value="240">
+                </div>
+                <button class="calculate-btn">Calculate</button>
+            </div>
+            
+            <div class="results-section">
+                <div class="result-title">Results</div>
+                <div class="result-item">
+                    <div class="result-label">Monthly EMI</div>
+                    <div class="result-value">₹8,718</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Total Amount</div>
+                    <div class="result-value">₹20,92,320</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-label">Total Interest</div>
+                    <div class="result-value">₹10,92,320</div>
+                </div>
+            </div>
+            
+            <div class="schedule-section">
+                <div class="section-title">Amortization Schedule</div>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Principal</th>
+                            <th>Interest</th>
+                            <th>Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>₹1,585</td>
+                            <td>₹7,133</td>
+                            <td>₹9,98,415</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>₹1,596</td>
+                            <td>₹7,122</td>
+                            <td>₹9,96,819</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>₹1,607</td>
+                            <td>₹7,111</td>
+                            <td>₹9,95,212</td>
+                        </tr>
+                        <tr style="background: #f9f9f9;">
+                            <td colspan="4" style="text-align: center; padding: 10px; color: #666;">
+                                ... and 237 more months
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn">📄 Export PDF</button>
+                <button class="action-btn primary">📤 Share</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

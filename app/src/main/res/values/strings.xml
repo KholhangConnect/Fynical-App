@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fynical</string>
+    
+    <!-- Home Screen -->
+    <string name="emi_calculator">EMI Calculator</string>
+    <string name="calculate_your_loan_emi">Calculate your loan EMI</string>
+    <string name="denomination_manager">Denomination Manager</string>
+    <string name="manage_rupees_and_coins">Manage rupees and coins</string>
+    
+    <!-- EMI Screen -->
+    <string name="principal_amount">Principal Amount</string>
+    <string name="interest_rate">Interest Rate (% per annum)</string>
+    <string name="loan_tenure">Loan Tenure (months)</string>
+    <string name="calculate">Calculate</string>
+    <string name="results">Results</string>
+    <string name="monthly_emi">Monthly EMI</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="total_interest">Total Interest</string>
+    
+    <!-- Denomination Screen -->
+    <string name="rupees">Rupees</string>
+    <string name="coins">Coins</string>
+    <string name="notes">Notes</string>
+    <string name="cash_book">Cash Book</string>
+    <string name="opening_balance">Opening Balance</string>
+    <string name="total_deposit">Total Deposit</string>
+    <string name="total_cash_in_hand">Total Cash in Hand</string>
+    <string name="total_payment">Total Payment</string>
+    <string name="closing_balance">Closing Balance</string>
+    <string name="total_notes">Notes total Amount= %1$s</string>
+    <string name="total_coins">Coins total Amount= %1$s</string>
+    <string name="grand_total">Grand Total:</string>
+    <string name="grand_total_equals">Grand Total = %1$s</string>
+    <string name="grand_total_in_words">Grand Total in Words:</string>
+    
+    <!-- Common -->
+    <string name="denomination">Denomination</string>
+    <string name="quantity">Quantity</string>
+    <string name="total">Total</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    
+    <!-- Content Descriptions -->
+    <string name="back">Back</string>
+    <string name="emi_calculator_desc">EMI Calculator</string>
+    <string name="denomination_manager_desc">Denomination Manager</string>
+    <string name="edit_desc">Edit</string>
+    <string name="delete_desc">Delete</string>
+    
+    <!-- Dialogs -->
+    <string name="delete_denomination">Delete Denomination</string>
+    <string name="delete_denomination_confirmation">Are you sure you want to delete this denomination Quantity? This action cannot be undone.</string>
+    <string name="add_notes_denomination_quantity">Add %1$s Notes</string>
+    <string name="add_coins_denomination_quantity">Add %1$s Coins</string>
+    <string name="update_notes_denomination_quantity">Update %1$s Notes</string>
+    <string name="update_coins_denomination_quantity">Update %1$s Coins</string>
+    <string name="denomination_label">Denomination: %1$s</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings">Settings</string>
+    <string name="appearance">Appearance</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="display_settings">Display Settings</string>
+    <string name="keep_screen_on">Keep Screen On</string>
+    <string name="card_size">Card Size</string>
+    <string name="text_size">Text Size</string>
+    <string name="card_padding">Card Padding</string>
+    <string name="card_spacing">Card Spacing</string>
+    <string name="card_spacing_divider_note">When spacing is 0, cards will be separated by dividers</string>
+    <string name="denomination_visibility">Denomination Visibility</string>
+    <string name="history_management">History Management</string>
+    <string name="view_history">View History</string>
+    <string name="total_entries">Total Entries: %1$d</string>
+    <string name="clear_history">Clear History</string>
+    <string name="clear_history_confirmation">Are you sure you want to clear all history entries? This action cannot be undone.</string>
+    <string name="cash_book_history">Cash Book History</string>
+    <string name="no_history_entries">No history entries</string>
+    <string name="delete_entry">Delete Entry</string>
+    <string name="delete_entry_confirmation">Are you sure you want to delete this history entry?</string>
+    <string name="close">Close</string>
+    <string name="clear">Clear</string>
+    <string name="save_to_history">Save to History</string>
+    <string name="save_to_history_confirmation">Save this Cash Book entry to history?</string>
+    
+    <!-- Denomination Save/Load/Share -->
+    <string name="save_denomination">Save Denomination</string>
+    <string name="load_denomination">Load Denomination</string>
+    <string name="share_denomination">Share Denomination</string>
+    <string name="enter_date">Enter Date</string>
+    <string name="date">Date</string>
+    <string name="no_saved_denominations">No saved denominations</string>
+    
+    <!-- UX Improvements -->
+    <string name="clear_all">Clear All</string>
+    <string name="copy_to_clipboard">Copy to Clipboard</string>
+    <string name="copied_to_clipboard">Copied to Clipboard!</string>
+    <string name="increase">Increase Quantity</string>
+    <string name="decrease">Decrease Quantity</string>
+    <string name="select_date">Select Date</string>
+    <string name="date_format_hint">Format: DD/MM/YYYY (e.g., 25/12/2024)</string>
+    <string name="ok">OK</string>
+    <string name="cannot_save">Cannot Save</string>
+    <string name="cannot_save_zero_denominations">Cannot save! Please enter denominations with quantities greater than zero to save successfully.\n\nAll denominations are currently zero.</string>
+    
+    <!-- Calculator Categories -->
+    <string name="basic_calculators">Basic Calculators</string>
+    <string name="loan_tools">Loan Tools</string>
+    <string name="tax_pricing">Tax &amp; Pricing</string>
+    <string name="utilities">Utilities</string>
+    
+    <!-- Basic Calculators -->
+    <string name="fd_calculator">Fixed Deposit Calculator</string>
+    <string name="fd_calculator_desc">Calculate FD maturity amount</string>
+    <string name="rd_calculator">Recurring Deposit Calculator</string>
+    <string name="rd_calculator_desc">Calculate RD maturity amount</string>
+    <string name="simple_interest_calculator">Simple Interest Calculator</string>
+    <string name="simple_interest_desc">Calculate simple interest</string>
+    <string name="compound_interest_calculator">Compound Interest Calculator</string>
+    <string name="compound_interest_desc">Calculate compound interest</string>
+    <string name="amount_to_words">Amount to Words</string>
+    <string name="amount_to_words_desc">Convert amount to words</string>
+    <string name="discount_calculator">Discount Calculator</string>
+    <string name="discount_calculator_desc">Calculate discounts and savings</string>
+    
+    <!-- FD Calculator -->
+    <string name="principal">Principal Amount</string>
+    <string name="interest_rate_pa">Interest Rate (% per annum)</string>
+    <string name="tenure">Tenure</string>
+    <string name="years">Years</string>
+    <string name="months">Months</string>
+    <string name="compounding_frequency">Compounding Frequency</string>
+    <string name="quarterly">Quarterly</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
+    <string name="half_yearly">Half-Yearly</string>
+    <string name="maturity_amount">Maturity Amount</string>
+    <string name="interest_earned">Interest Earned</string>
+    
+    <!-- RD Calculator -->
+    <string name="monthly_deposit">Monthly Deposit</string>
+    <string name="total_deposits">Total Deposits</string>
+    
+    <!-- Simple Interest -->
+    <string name="time_period">Time Period</string>
+    <string name="days">Days</string>
+    <string name="interest_amount">Interest Amount</string>
+    
+    <!-- Compound Interest -->
+    <string name="compound_interest">Compound Interest</string>
+    
+    <!-- Amount to Words -->
+    <string name="enter_amount">Enter Amount</string>
+    <string name="amount_in_words">Amount in Words</string>
+    
+    <!-- Discount Calculator -->
+    <string name="original_price">Original Price</string>
+    <string name="discount">Discount</string>
+    <string name="discount_percentage">Discount Percentage (%)</string>
+    <string name="discount_amount">Discount Amount</string>
+    <string name="final_price">Final Price</string>
+    <string name="savings">Savings</string>
+    <string name="discount_mode">Discount Mode</string>
+    <string name="percentage_off">Percentage Off</string>
+    <string name="fixed_amount_off">Fixed Amount Off</string>
+    
+    <!-- Tax Calculators -->
+    <string name="gst_calculator">GST Calculator</string>
+    <string name="gst_calculator_desc">Calculate GST amount</string>
+    <string name="vat_calculator">VAT Calculator</string>
+    <string name="vat_calculator_desc">Calculate VAT amount</string>
+    <string name="base_amount">Base Amount</string>
+    <string name="gst_rate">GST Rate (%)</string>
+    <string name="vat_rate">VAT Rate (%)</string>
+    <string name="gst_amount">GST Amount</string>
+    <string name="vat_amount">VAT Amount</string>
+    <string name="gst_inclusive">GST Inclusive</string>
+    <string name="gst_exclusive">GST Exclusive</string>
+    <string name="cgst">CGST</string>
+    <string name="sgst">SGST</string>
+    <string name="igst">IGST</string>
+    <string name="gst_type">GST Type</string>
+    
+    <!-- Currency Converter -->
+    <string name="currency_converter">Currency Converter</string>
+    <string name="currency_converter_desc">Convert currencies with live rates</string>
+    <string name="from_currency">From Currency</string>
+    <string name="to_currency">To Currency</string>
+    <string name="amount_to_convert">Amount to Convert</string>
+    <string name="converted_amount">Converted Amount</string>
+    <string name="exchange_rate">Exchange Rate</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="refresh_rates">Refresh Rates</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="using_cached_rates">Using cached rates</string>
+    
+    <!-- Loan Tools -->
+    <string name="emi_quick_calculator">EMI Quick Calculator</string>
+    <string name="emi_quick_desc">Quick EMI calculation with sliders</string>
+    <string name="advanced_emi">Advanced EMI Calculator</string>
+    <string name="advanced_emi_desc">EMI with prepayment and moratorium</string>
+    <string name="loan_profile_manager">Loan Profile Manager</string>
+    <string name="loan_profile_desc">Manage your loan profiles</string>
+    <string name="loan_eligibility">Loan Eligibility Calculator</string>
+    <string name="loan_eligibility_desc">Check loan eligibility</string>
+    <string name="loan_comparison">Loan Comparison</string>
+    <string name="loan_comparison_desc">Compare multiple loans</string>
+    <string name="prepayment_calculator">Prepayment Calculator</string>
+    <string name="prepayment_calculator_desc">Calculate prepayment savings</string>
+    <string name="roi_change_calculator">ROI Change Calculator</string>
+    <string name="roi_change_desc">Impact of interest rate changes</string>
+    <string name="moratorium_calculator">Moratorium Calculator</string>
+    <string name="moratorium_calculator_desc">Calculate moratorium impact</string>
+    
+    <!-- General Calculators -->
+    <string name="simple_calculator">Simple Calculator</string>
+    <string name="simple_calculator_desc">Basic arithmetic calculator</string>
+    <string name="scientific_calculator">Scientific Calculator</string>
+    <string name="scientific_calculator_desc">Advanced scientific calculator</string>
+    
+    <!-- SIP Calculator -->
+    <string name="sip_calculator">SIP Calculator</string>
+    <string name="sip_calculator_desc">Systematic Investment Plan calculator</string>
+    <string name="monthly_investment">Monthly Investment</string>
+    <string name="expected_annual_return">Expected Annual Return</string>
+    <string name="investment_tenure">Investment Tenure</string>
+    <string name="estimated_returns">Estimated Returns</string>
+    <string name="return_percentage">Return Percentage</string>
+    
+    <!-- PPF Calculator -->
+    <string name="ppf_calculator">PPF Calculator</string>
+    <string name="ppf_calculator_desc">Public Provident Fund calculator</string>
+    <string name="annual_investment">Annual Investment</string>
+    
+    <!-- Income Tax Calculator -->
+    <string name="income_tax_calculator">Income Tax Calculator</string>
+    <string name="income_tax_calculator_desc">Calculate income tax (India)</string>
+    <string name="annual_income">Annual Income</string>
+    <string name="age">Age</string>
+    <string name="deductions">Deductions</string>
+    <string name="new_tax_regime">New Tax Regime</string>
+    <string name="old_tax_regime">Old Tax Regime</string>
+    <string name="taxable_income">Taxable Income</string>
+    <string name="tax">Tax</string>
+    <string name="cess">Cess (4%)</string>
+    <string name="total_tax">Total Tax</string>
+    
+    <!-- Inflation Calculator -->
+    <string name="inflation_calculator">Inflation Calculator</string>
+    <string name="inflation_calculator_desc">Calculate future value considering inflation</string>
+    <string name="current_amount">Current Amount</string>
+    <string name="current_value">Current Value</string>
+    <string name="inflation_rate">Inflation Rate</string>
+    <string name="purchasing_power_loss">Purchasing Power Loss</string>
+    
+    <!-- Lumpsum Calculator -->
+    <string name="lumpsum_calculator">Lumpsum Calculator</string>
+    <string name="lumpsum_calculator_desc">One-time investment calculator</string>
+    <string name="investment_amount">Investment Amount</string>
+    <string name="investment_period">Investment Period</string>
+    <string name="expected_return_rate">Expected Return Rate</string>
+    <string name="future_value">Future Value</string>
+    <string name="expected_returns">Expected Returns</string>
+    <string name="absolute_return">Absolute Return</string>
+    
+    <!-- Gratuity Calculator -->
+    <string name="gratuity_calculator">Gratuity Calculator</string>
+    <string name="gratuity_calculator_desc">Calculate gratuity amount</string>
+    <string name="last_drawn_salary">Last Drawn Salary</string>
+    <string name="years_of_service">Years of Service</string>
+    <string name="gratuity_amount">Gratuity Amount</string>
+    
+    <!-- EPF Calculator -->
+    <string name="epf_calculator">EPF Calculator</string>
+    <string name="epf_calculator_desc">Employee Provident Fund calculator</string>
+    <string name="basic_salary">Basic Salary</string>
+    <string name="employee_contribution">Employee Contribution</string>
+    <string name="employer_contribution">Employer Contribution</string>
+    <string name="total_contribution">Total Contribution</string>
+    <string name="epf_balance">EPF Balance</string>
+    
+    <!-- PPF Calculator -->
+    <string name="annual_contribution">Annual Contribution</string>
+    <string name="ppf_interest_rate">PPF Interest Rate (% per annum)</string>
+    <string name="ppf_maturity_amount">Maturity Amount</string>
+    
+    <!-- Income Tax Calculator -->
+    <string name="tax_slab">Tax Slab</string>
+    <string name="tax_payable">Tax Payable</string>
+    <string name="effective_tax_rate">Effective Tax Rate</string>
+    <string name="net_income">Net Income</string>
+    
+    <!-- SIP Calculator -->
+    <string name="total_investment">Total Investment</string>
+    
+    <!-- About Screen -->
+    <string name="about">About</string>
+    <string name="about_description">Fincal is a comprehensive financial calculator app designed to help you with all your financial calculations. From loan EMIs to investment planning, tax calculations to currency conversion, we\'ve got you covered.</string>
+    <string name="key_features">Key Features</string>
+    <string name="comprehensive_financial_calculators">Comprehensive Financial Calculators</string>
+    <string name="loan_tools_and_analysis">Loan Tools and Analysis</string>
+    <string name="tax_and_pricing_tools">Tax and Pricing Tools</string>
+    <string name="export_results_pdf_png">Export Results as PDF/PNG</string>
+    <string name="developed_by">Developed By</string>
+    
+    <!-- Feedback Screen -->
+    <string name="feedback">Feedback</string>
+    <string name="we_value_your_feedback">We Value Your Feedback</string>
+    <string name="feedback_description">Your feedback helps us improve Fincal. Please share your thoughts, suggestions, or report any issues you\'ve encountered.</string>
+    <string name="name_optional">Name (Optional)</string>
+    <string name="email_optional">Email (Optional)</string>
+    <string name="your_feedback">Your Feedback</string>
+    <string name="enter_your_feedback_here">Enter your feedback here...</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="contact_us_directly">Contact Us Directly</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="feedback_sent_successfully">Your feedback has been sent successfully. We appreciate your input!</string>
+    
+    <!-- YouTube Tutorial -->
+    <string name="youtube_tutorial">YouTube Tutorial</string>
+    <string name="watch_tutorial">Watch Tutorial</string>
+    <string name="tutorial_description">Learn how to use Fincal with our video tutorials</string>
+    
+    <!-- Share/Export -->
+    <string name="share">Share</string>
+    <string name="share_schedule">Share Schedule</string>
+    <string name="choose_share_format">Choose format to share:</string>
+    <string name="pdf">PDF</string>
+    <string name="image">Image</string>
+    <string name="share_pdf">Share PDF</string>
+    <string name="share_image">Share Image</string>
+</resources>
